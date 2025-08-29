@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Schedule</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-4">
+
+  <main class="max-w-4xl mx-auto">
+
+    <div class="grid grid-cols-3 gap-2 mb-4 md:flex md:overflow-x-auto md:space-x-2">
+      <button data-target="mon" class="day-btn px-4 py-2 rounded bg-blue-500 text-white font-semibold shadow hover:bg-blue-600 active:bg-blue-700 selected:bg-blue-700">Mon</button>
+      <button data-target="tue" class="day-btn px-4 py-2 rounded bg-blue-500 text-white font-semibold shadow hover:bg-blue-600 active:bg-blue-700 selected:bg-blue-700">Tue</button>
+      <button data-target="wed" class="day-btn px-4 py-2 rounded bg-blue-500 text-white font-semibold shadow hover:bg-blue-600 active:bg-blue-700 selected:bg-blue-700">Wed</button>
+      <button data-target="thu" class="day-btn px-4 py-2 rounded bg-blue-500 text-white font-semibold shadow hover:bg-blue-600 active:bg-blue-700 selected:bg-blue-700">Thu</button>
+      <button data-target="fri" class="day-btn px-4 py-2 rounded bg-green-500 text-white font-semibold shadow hover:bg-green-600 active:bg-green-700 selected:bg-green-700">Fri</button>
+      <button data-target="sat" class="day-btn px-4 py-2 rounded bg-green-500 text-white font-semibold shadow hover:bg-green-600 active:bg-green-700 selected:bg-green-700">Sat</button>
+      <button data-target="sun" class="day-btn px-4 py-2 rounded bg-green-500 text-white font-semibold shadow hover:bg-green-600 active:bg-green-700 selected:bg-green-700">Sun</button>
+      <button data-target="exceptional" class="day-btn px-4 py-2 rounded bg-red-500 text-white font-semibold shadow hover:bg-red-600 active:bg-red-700 selected:bg-red-700">Exceptional Day</button>
+    </div>
+
+    <div id="schedule-container" class="space-y-6">
+
+      <div id="mon" class="day-section bg-white rounded-lg shadow p-4 transition-opacity duration-300 opacity-0 hidden">
+        <h2 class="text-xl font-bold mb-3 text-blue-600">Monday</h2>
+        <div class="space-y-2">
+          <div class="flex justify-between p-2 bg-blue-100 rounded-lg"><span>10:00 AM–7:00 PM</span><span>University</span></div>
+          <div class="flex justify-between p-2 bg-blue-200 rounded-lg"><span>7:00 PM–10:30 PM</span><span>Tuition</span></div>
+          <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>11:00 PM–12:00 AM</span><span>Personal Project / Code Review</span></div>
+        </div>
+      </div>
+
+      <div id="tue" class="day-section bg-white rounded-lg shadow p-4 transition-opacity duration-300 opacity-0 hidden">
+        <h2 class="text-xl font-bold mb-3 text-blue-600">Tuesday</h2>
+        <div class="space-y-2">
+          <div class="flex justify-between p-2 bg-blue-100 rounded-lg"><span>10:00 AM–7:00 PM</span><span>University</span></div>
+          <div class="flex justify-between p-2 bg-blue-200 rounded-lg"><span>7:00 PM–10:30 PM</span><span>Tuition</span></div>
+          <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>11:00 PM–12:00 AM</span><span>Personal Project / Code Review</span></div>
+        </div>
+      </div>
+
+      <div id="wed" class="day-section bg-white rounded-lg shadow p-4 transition-opacity duration-300 opacity-0 hidden">
+        <h2 class="text-xl font-bold mb-3 text-blue-600">Wednesday</h2>
+        <div class="space-y-2">
+          <div class="flex justify-between p-2 bg-blue-100 rounded-lg"><span>10:00 AM–7:00 PM</span><span>University</span></div>
+          <div class="flex justify-between p-2 bg-blue-200 rounded-lg"><span>7:00 PM–10:30 PM</span><span>Tuition</span></div>
+          <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>11:00 PM–12:00 AM</span><span>Personal Project / Code Review</span></div>
+        </div>
+      </div>
+
+      <div id="thu" class="day-section bg-white rounded-lg shadow p-4 transition-opacity duration-300 opacity-0 hidden">
+        <h2 class="text-xl font-bold mb-3 text-blue-600">Thursday</h2>
+        <div class="space-y-2">
+          <div class="flex justify-between p-2 bg-blue-100 rounded-lg"><span>10:00 AM–7:00 PM</span><span>University</span></div>
+          <div class="flex justify-between p-2 bg-blue-200 rounded-lg"><span>7:00 PM–10:30 PM</span><span>Tuition</span></div>
+          <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>11:00 PM–12:00 AM</span><span>Personal Project / Code Review</span></div>
+        </div>
+      </div>
+
+      <div id="fri" class="day-section bg-white rounded-lg shadow p-4 transition-opacity duration-300 opacity-0 hidden">
+        <h2 class="text-xl font-bold mb-3 text-green-600">Friday</h2>
+        <div class="space-y-2">
+          <div class="flex justify-between p-2 bg-purple-100 rounded-lg"><span>10:00–11:00 AM</span><span>Next.js + Prisma (InQbic)</span></div>
+          <div class="flex justify-between p-2 bg-purple-100 rounded-lg"><span>11:00–12:00 PM</span><span>Next.js + Prisma (InQbic)</span></div>
+          <div class="flex justify-between p-2 bg-orange-100 rounded-lg"><span>12:00–1:00 PM</span><span>Three.js Basics / Tutorials</span></div>
+          <div class="flex justify-between p-2 bg-gray-200 rounded-lg"><span>1:00–2:30 PM</span><span>Lunch / Rest</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>2:30–3:30 PM</span><span>CS Core (DSA/System Design)</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>3:30–4:30 PM</span><span>DevOps / Ubuntu / Docker</span></div>
+          <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>4:30–5:00 PM</span><span>Blog / Notes Writing</span></div>
+          <div class="flex justify-between p-2 bg-purple-100 rounded-lg"><span>5:30–6:30 PM</span><span>InQbic Feature Build</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>7:00–10:30 PM</span><span>Tuition / Free Study</span></div>
+          <div class="flex justify-between p-2 bg-yellow-200 font-bold rounded-lg"><span>11:00–12:00 PM</span><span>Project / Docs / Notes</span></div>
+        </div>
+      </div>
+
+      <div id="sat" class="day-section bg-white rounded-lg shadow p-4 transition-opacity duration-300 opacity-0 hidden">
+        <h2 class="text-xl font-bold mb-3 text-green-600">Saturday</h2>
+        <div class="space-y-2">
+          <div class="flex justify-between p-2 bg-purple-100 rounded-lg"><span>10:00–11:00 AM</span><span>Next.js + Prisma (InQbic)</span></div>
+          <div class="flex justify-between p-2 bg-purple-100 rounded-lg"><span>11:00–12:00 PM</span><span>Next.js + Prisma (InQbic)</span></div>
+          <div class="flex justify-between p-2 bg-orange-100 rounded-lg"><span>12:00–1:00 PM</span><span>Three.js Basics / Tutorials</span></div>
+          <div class="flex justify-between p-2 bg-gray-200 rounded-lg"><span>1:00–2:30 PM</span><span>Lunch / Rest</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>2:30–3:30 PM</span><span>CS Core (DSA/System Design)</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>3:30–4:30 PM</span><span>DevOps / Ubuntu / Docker</span></div>
+          <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>4:30–5:00 PM</span><span>Blog / Notes Writing</span></div>
+          <div class="flex justify-between p-2 bg-purple-100 rounded-lg"><span>5:30–6:30 PM</span><span>InQbic Feature Build</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>7:00–10:30 PM</span><span>Tuition / Free Study</span></div>
+          <div class="flex justify-between p-2 bg-yellow-200 font-bold rounded-lg"><span>11:00–12:00 PM</span><span>Project / Docs / Notes</span></div>
+        </div>
+      </div>
+
+      <div id="sun" class="day-section bg-white rounded-lg shadow p-4 transition-opacity duration-300 opacity-0 hidden">
+        <h2 class="text-xl font-bold mb-3 text-green-600">Sunday</h2>
+        <div class="space-y-2">
+          <div class="flex justify-between p-2 bg-purple-100 rounded-lg"><span>10:00–11:00 AM</span><span>Next.js + Prisma (InQbic)</span></div>
+          <div class="flex justify-between p-2 bg-purple-100 rounded-lg"><span>11:00–12:00 PM</span><span>Next.js + Prisma (InQbic)</span></div>
+          <div class="flex justify-between p-2 bg-orange-100 rounded-lg"><span>12:00–1:00 PM</span><span>Three.js Basics / Tutorials</span></div>
+          <div class="flex justify-between p-2 bg-gray-200 rounded-lg"><span>1:00–2:30 PM</span><span>Lunch / Rest</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>2:30–3:30 PM</span><span>CS Core (DSA/System Design)</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>3:30–4:30 PM</span><span>DevOps / Ubuntu / Docker</span></div>
+          <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>4:30–5:00 PM</span><span>Blog / Notes Writing</span></div>
+          <div class="flex justify-between p-2 bg-purple-100 rounded-lg"><span>5:30–6:30 PM</span><span>InQbic Feature Build</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>7:00–10:30 PM</span><span>Tuition / Free Study</span></div>
+          <div class="flex justify-between p-2 bg-yellow-200 font-bold rounded-lg"><span>11:00–12:00 PM</span><span>Project / Docs / Notes</span></div>
+        </div>
+      </div>
+
+      <div id="exceptional" class="day-section bg-white rounded-lg shadow p-4 transition-opacity duration-300 opacity-0 hidden">
+        <h2 class="text-xl font-bold mb-3 text-red-600">Exceptional Day</h2>
+        <div class="space-y-2">
+          <div class="flex justify-between p-2 bg-yellow-100 rounded-lg"><span>10:00–11:30 AM</span><span>Deep Focus: Django</span></div>
+          <div class="flex justify-between p-2 bg-yellow-100 rounded-lg"><span>11:30–1:00 PM</span><span>Next.js / Prisma Feature</span></div>
+          <div class="flex justify-between p-2 bg-orange-100 rounded-lg"><span>1:00–2:00 PM</span><span>Three.js Learning / Practice</span></div>
+          <div class="flex justify-between p-2 bg-gray-200 rounded-lg"><span>2:00–2:30 PM</span><span>Lunch / Rest</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>2:30–4:00 PM</span><span>CS Core / DSA Review</span></div>
+          <div class="flex justify-between p-2 bg-purple-100 rounded-lg"><span>4:00–5:00 PM</span><span>DevOps / Ubuntu Practice</span></div>
+          <div class="flex justify-between p-2 bg-gray-100 rounded-lg"><span>5:00–5:30 PM</span><span>Blog / Notes Writing</span></div>
+          <div class="flex justify-between p-2 bg-green-100 rounded-lg"><span>5:30–7:00 PM</span><span>Personal Project / Feature Build</span></div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.day-btn');
+    const sections = document.querySelectorAll('.day-section');
+
+    function showDay(targetId) {
+      sections.forEach(sec => {
+        sec.classList.add('opacity-0', 'hidden');
+        sec.classList.remove('opacity-100');
+      });
+      const targetSec = document.getElementById(targetId);
+      if (targetSec) {
+        targetSec.classList.remove('hidden');
+        setTimeout(() => {
+          targetSec.classList.add('opacity-100');
+          targetSec.classList.remove('opacity-0');
+        }, 50); // Small delay for transition
+      }
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.dataset.target;
+        showDay(target);
+        buttons.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const today = new Date().getDay();
+      const dayMap = {1: 'mon', 2: 'tue', 3: 'wed', 4: 'thu', 5: 'fri', 6: 'sat', 0: 'sun'};
+      const todayId = dayMap[today] || 'mon'; 
+      const todayBtn = document.querySelector(`.day-btn[data-target="${todayId}"]`);
+      if (todayBtn) {
+        todayBtn.click();
+      } else {
+        buttons[0].click();
+      }
+    });
+  </script>
+
+</body>
+</html>
